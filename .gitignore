@@ -10,6 +10,7 @@ scratch/*
 **/*.parquet
 **/*.pkl
 **/*.npy
+text/output/*.html
 **/secrets.yml
 **/secrets.txt
 build/9-election2016Data/input/2016-precinct-house.csv
