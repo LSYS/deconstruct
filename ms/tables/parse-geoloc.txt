@@ -1,0 +1,45 @@
+\begin{pseudocode}\scriptsize
+\caption{Parsing Geolocation}\label{al:parse-geoloc}
+\ForEach{geoloc(ation string)}{
+\If{comma not in geoloc}{
+%%%%%%%%%%%%%%% [Step 1] Check if unambiguously a non-U.S. country %%%%%%%%%%%%%
+\tcc{[Step 1] Check if unambiguously a non-U.S. country}
+\uIf{len(geoloc)==2}{check if geoloc matches a non-U.S. country using ISO alpha-2 code}
+\uElseIf{len(geoloc)==3}{check if geoloc matches a non-U.S. country using ISO alpha-3 code}
+\Else{check if geoloc matches a non-U.S. country using ISO country name name}
+%%%%%%%%%%% [Step 2] try geoloc as U.S. city without state info. %%%%%%%%%%%%%%%
+\If{not unambiguously non-U.S. country in [Step 1]}{
+\tcc{[Step 2] Try geoloc string as U.S. city w/o state info.}
+try geoloc as a city named after state (e.g. 'utah' as Utah City, Utah)\\
+\If{that fails}{try geoloc as a uniquely named U.S. city (e.g. 'chicago' as Chicago City in Illinois)}
+}
+
+\If{still not identified as a U.S. city-state in [Step 2]}{
+%%%%%%%%%%% [Step 3] try geoloc as U.S. city with state info. %%%%%%%%%%%%%%%
+\tcc{[Step 3] Try geoloc string as U.S. city with state info.}
+check if a comma is implied in either order (e.g. 'philadelphia pa' and 'pa philadelphia' as Philadelphia City, Pennsylvannia)
+}
+}% end of If{comma not in geoloc} loop
+
+\If{comma in geoloc}{
+%%%%%%%%%%%%%%%%% [Step 4] try geoloc as non-U.S. country %%%%%%%%%%%%%%%%%%%%%%
+\tcc{[Step 4] Check if unambiguously a non-U.S. country}
+check if one side of comma is unambiguously a non-U.S. country as in [Step 1] (e.g. 'beunos aires, argentina' should be filtered out)
+
+\If{not unambiguously a non-U.S. country}{
+\tcc{[Step 5] Try as a U.S. city-state}
+\uIf{one side of comma in geoloc has len==2}{use as State postal code and the other side as city (e.g. 'avon, al' as Avon City, Alabama)}
+\Else{try one side as a State name and the other as a city name (e.g. 'avon, alabama' and 'alabama, avon' as Avon City, Alabama)}
+}
+
+\If{still not identified as U.S. city-state}{
+\tcc{[Step 6] Try one side as city-state and the other an indicator of the States (e.g. 'us', 'usa', 'united states', 'united states of america'}
+\If{one side is indicator of the U.S.}{
+try other side as city named after state (e.g. 'utah, usa' as Utah City, Utah)\\
+\If{that fails}{try geoloc as a uniquely named U.S. city (e.g. 'chicago, united states' as Chicago City in Illinois)}}
+}
+
+}% end of \If{comma in geoloc}
+
+}% end of \ForEach{geoloc}
+\end{pseudocode}
