@@ -1,0 +1,497 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0002_ds244_20195_2019_county'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2015-2019
+Geographic level: County (by State)
+Dataset:          2019 American Community Survey: 5-Year Data [2015-2019, Block Groups & Larger Areas]
+   NHGIS code:    2015_2019_ACS5a
+   NHGIS ID:      ds244
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+Data type(s):     (E) Estimates
+                  (M) Margins of error
+ 
+Tables:
+ 
+1. Sex by Age
+   Universe:    Total population
+   Source code: B01001
+   NHGIS code:  ALT0
+ 
+2. Total Population
+   Universe:    Total population
+   Source code: B01003
+   NHGIS code:  ALUB
+ 
+3. Race
+   Universe:    Total population
+   Source code: B02001
+   NHGIS code:  ALUC
+ 
+4. Hispanic or Latino Origin
+   Universe:    Total population
+   Source code: B03003
+   NHGIS code:  ALUL
+ 
+5. Educational Attainment for the Population 25 Years and Over
+   Universe:    Population 25 years and over
+   Source code: B15003
+   NHGIS code:  ALWG
+ 
+6. Median Household Income in the Past 12 Months (in 2019 Inflation-Adjusted Dollars)
+   Universe:    Households
+   Source code: B19013
+   NHGIS code:  ALW1
+ 
+7. Employment Status for the Population 16 Years and Over
+   Universe:    Population 16 years and over
+   Source code: B23025
+   NHGIS code:  ALY3
+ 
+8. Citizen, Voting-Age Population by Age [Data for nation, state, county, tract, block group, place, congressional district, and state legislative district levels only]
+   Universe:    Citizens 18 years and over
+   Source code: B29001
+   NHGIS code:  AL2G
+ 
+9. Allocation of Citizenship Status
+   Universe:    Total population
+   Source code: B99051
+   NHGIS code:  AL2O
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        STUSAB:      State Postal Abbreviation
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        COUSUBA:     County Subdivision Code
+        PLACEA:      Place Code
+        TRACTA:      Census Tract Code
+        BLKGRPA:     Block Group Code
+        CONCITA:     Consolidated City Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Area/Alaska Native Area (Reservation or Statistical Entity Only) Code
+        TRUSTA:      American Indian Area (Off-Reservation Trust Land Only)/Hawaiian Home Land Code
+        AIHHTLI:     American Indian Trust Land/ Hawaiian Home Land Indicator
+        AITS:        American Indian Tribal Subdivision (FIPS)
+        ANRCA:       Alaska Native Regional Corporation Code
+        CBSAA:       Metropolitan Statistical Area/Micropolitan Statistical Area Code
+        CSAA:        Combined Statistical Area Code
+        METDIVA:     Metropolitan Division Code
+        MEMI:        Metropolitan/Micropolitan Indicator Flag
+        NECTAA:      New England City and Town Area Code
+        CNECTAA:     Combined New England City and Town Area Code
+        NECTADIVA:   New England City and Town Area Division Code
+        UAA:         Urban Area Code
+        CDCURRA:     Congressional District (2019-2021, 116th Congress) Code
+        SLDUA:       State Legislative District (Upper Chamber) Code
+        SLDLA:       State Legislative District (Lower Chamber) Code
+        ZCTA5A:      5-Digit ZIP Code Tabulation Area Code
+        SUBMCDA:     Subminor Civil Division Code
+        SDELMA:      School District (Elementary)/Remainder Code
+        SDSECA:      School District (Secondary)/Remainder Code
+        SDUNIA:      School District (Unified)/Remainder Code
+        UR:          Urban/Rural
+        PCI:         Principal City Indicator
+        PUMA5A:      Public Use Microdata Sample Area (PUMA) Code
+        GEOID:       Census Geographic Identifier
+        BTTRA:       Tribal Census Tract Code
+        BTBGA:       Tribal Block Group Code
+ 
+Data Type (E):
+    Estimates
+ 
+        NAME_E:      Area Name
+ 
+    Table 1:     Sex by Age
+    Universe:    Total population
+    Source code: B01001
+    NHGIS code:  ALT0
+        ALT0E001:    Total
+        ALT0E002:    Male
+        ALT0E003:    Male: Under 5 years
+        ALT0E004:    Male: 5 to 9 years
+        ALT0E005:    Male: 10 to 14 years
+        ALT0E006:    Male: 15 to 17 years
+        ALT0E007:    Male: 18 and 19 years
+        ALT0E008:    Male: 20 years
+        ALT0E009:    Male: 21 years
+        ALT0E010:    Male: 22 to 24 years
+        ALT0E011:    Male: 25 to 29 years
+        ALT0E012:    Male: 30 to 34 years
+        ALT0E013:    Male: 35 to 39 years
+        ALT0E014:    Male: 40 to 44 years
+        ALT0E015:    Male: 45 to 49 years
+        ALT0E016:    Male: 50 to 54 years
+        ALT0E017:    Male: 55 to 59 years
+        ALT0E018:    Male: 60 and 61 years
+        ALT0E019:    Male: 62 to 64 years
+        ALT0E020:    Male: 65 and 66 years
+        ALT0E021:    Male: 67 to 69 years
+        ALT0E022:    Male: 70 to 74 years
+        ALT0E023:    Male: 75 to 79 years
+        ALT0E024:    Male: 80 to 84 years
+        ALT0E025:    Male: 85 years and over
+        ALT0E026:    Female
+        ALT0E027:    Female: Under 5 years
+        ALT0E028:    Female: 5 to 9 years
+        ALT0E029:    Female: 10 to 14 years
+        ALT0E030:    Female: 15 to 17 years
+        ALT0E031:    Female: 18 and 19 years
+        ALT0E032:    Female: 20 years
+        ALT0E033:    Female: 21 years
+        ALT0E034:    Female: 22 to 24 years
+        ALT0E035:    Female: 25 to 29 years
+        ALT0E036:    Female: 30 to 34 years
+        ALT0E037:    Female: 35 to 39 years
+        ALT0E038:    Female: 40 to 44 years
+        ALT0E039:    Female: 45 to 49 years
+        ALT0E040:    Female: 50 to 54 years
+        ALT0E041:    Female: 55 to 59 years
+        ALT0E042:    Female: 60 and 61 years
+        ALT0E043:    Female: 62 to 64 years
+        ALT0E044:    Female: 65 and 66 years
+        ALT0E045:    Female: 67 to 69 years
+        ALT0E046:    Female: 70 to 74 years
+        ALT0E047:    Female: 75 to 79 years
+        ALT0E048:    Female: 80 to 84 years
+        ALT0E049:    Female: 85 years and over
+ 
+    Table 2:     Total Population
+    Universe:    Total population
+    Source code: B01003
+    NHGIS code:  ALUB
+        ALUBE001:    Total
+ 
+    Table 3:     Race
+    Universe:    Total population
+    Source code: B02001
+    NHGIS code:  ALUC
+        ALUCE001:    Total
+        ALUCE002:    White alone
+        ALUCE003:    Black or African American alone
+        ALUCE004:    American Indian and Alaska Native alone
+        ALUCE005:    Asian alone
+        ALUCE006:    Native Hawaiian and Other Pacific Islander alone
+        ALUCE007:    Some other race alone
+        ALUCE008:    Two or more races
+        ALUCE009:    Two or more races: Two races including Some other race
+        ALUCE010:    Two or more races: Two races excluding Some other race, and three or more races
+ 
+    Table 4:     Hispanic or Latino Origin
+    Universe:    Total population
+    Source code: B03003
+    NHGIS code:  ALUL
+        ALULE001:    Total
+        ALULE002:    Not Hispanic or Latino
+        ALULE003:    Hispanic or Latino
+ 
+    Table 5:     Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: B15003
+    NHGIS code:  ALWG
+        ALWGE001:    Total
+        ALWGE002:    No schooling completed
+        ALWGE003:    Nursery school
+        ALWGE004:    Kindergarten
+        ALWGE005:    1st grade
+        ALWGE006:    2nd grade
+        ALWGE007:    3rd grade
+        ALWGE008:    4th grade
+        ALWGE009:    5th grade
+        ALWGE010:    6th grade
+        ALWGE011:    7th grade
+        ALWGE012:    8th grade
+        ALWGE013:    9th grade
+        ALWGE014:    10th grade
+        ALWGE015:    11th grade
+        ALWGE016:    12th grade, no diploma
+        ALWGE017:    Regular high school diploma
+        ALWGE018:    GED or alternative credential
+        ALWGE019:    Some college, less than 1 year
+        ALWGE020:    Some college, 1 or more years, no degree
+        ALWGE021:    Associate's degree
+        ALWGE022:    Bachelor's degree
+        ALWGE023:    Master's degree
+        ALWGE024:    Professional school degree
+        ALWGE025:    Doctorate degree
+ 
+    Table 6:     Median Household Income in the Past 12 Months (in 2019 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19013
+    NHGIS code:  ALW1
+        ALW1E001:    Median household income in the past 12 months (in 2019 inflation-adjusted dollars)
+ 
+    Table 7:     Employment Status for the Population 16 Years and Over
+    Universe:    Population 16 years and over
+    Source code: B23025
+    NHGIS code:  ALY3
+        ALY3E001:    Total
+        ALY3E002:    In labor force
+        ALY3E003:    In labor force: Civilian labor force
+        ALY3E004:    In labor force: Civilian labor force: Employed
+        ALY3E005:    In labor force: Civilian labor force: Unemployed
+        ALY3E006:    In labor force: Armed Forces
+        ALY3E007:    Not in labor force
+ 
+    Table 8:     Citizen, Voting-Age Population by Age [Data for nation, state, county, tract, block group, place, congressional district, and state legislative district levels only]
+    Universe:    Citizens 18 years and over
+    Source code: B29001
+    NHGIS code:  AL2G
+        AL2GE001:    Total
+        AL2GE002:    18 to 29 years
+        AL2GE003:    30 to 44 years
+        AL2GE004:    45 to 64 years
+        AL2GE005:    65 years and over
+ 
+    Table 9:     Allocation of Citizenship Status
+    Universe:    Total population
+    Source code: B99051
+    NHGIS code:  AL2O
+        AL2OE001:    Total
+        AL2OE002:    Native
+        AL2OE003:    Native: Allocated
+        AL2OE004:    Native: Not allocated
+        AL2OE005:    Foreign born
+        AL2OE006:    Foreign born: Allocated
+        AL2OE007:    Foreign born: Not allocated
+ 
+Data Type (M):
+    Margins of error
+ 
+        NAME_M:      Area Name
+ 
+    Table 1:     Sex by Age
+    Universe:    Total population
+    Source code: B01001
+    NHGIS code:  ALT0
+        ALT0M001:    Total
+        ALT0M002:    Male
+        ALT0M003:    Male: Under 5 years
+        ALT0M004:    Male: 5 to 9 years
+        ALT0M005:    Male: 10 to 14 years
+        ALT0M006:    Male: 15 to 17 years
+        ALT0M007:    Male: 18 and 19 years
+        ALT0M008:    Male: 20 years
+        ALT0M009:    Male: 21 years
+        ALT0M010:    Male: 22 to 24 years
+        ALT0M011:    Male: 25 to 29 years
+        ALT0M012:    Male: 30 to 34 years
+        ALT0M013:    Male: 35 to 39 years
+        ALT0M014:    Male: 40 to 44 years
+        ALT0M015:    Male: 45 to 49 years
+        ALT0M016:    Male: 50 to 54 years
+        ALT0M017:    Male: 55 to 59 years
+        ALT0M018:    Male: 60 and 61 years
+        ALT0M019:    Male: 62 to 64 years
+        ALT0M020:    Male: 65 and 66 years
+        ALT0M021:    Male: 67 to 69 years
+        ALT0M022:    Male: 70 to 74 years
+        ALT0M023:    Male: 75 to 79 years
+        ALT0M024:    Male: 80 to 84 years
+        ALT0M025:    Male: 85 years and over
+        ALT0M026:    Female
+        ALT0M027:    Female: Under 5 years
+        ALT0M028:    Female: 5 to 9 years
+        ALT0M029:    Female: 10 to 14 years
+        ALT0M030:    Female: 15 to 17 years
+        ALT0M031:    Female: 18 and 19 years
+        ALT0M032:    Female: 20 years
+        ALT0M033:    Female: 21 years
+        ALT0M034:    Female: 22 to 24 years
+        ALT0M035:    Female: 25 to 29 years
+        ALT0M036:    Female: 30 to 34 years
+        ALT0M037:    Female: 35 to 39 years
+        ALT0M038:    Female: 40 to 44 years
+        ALT0M039:    Female: 45 to 49 years
+        ALT0M040:    Female: 50 to 54 years
+        ALT0M041:    Female: 55 to 59 years
+        ALT0M042:    Female: 60 and 61 years
+        ALT0M043:    Female: 62 to 64 years
+        ALT0M044:    Female: 65 and 66 years
+        ALT0M045:    Female: 67 to 69 years
+        ALT0M046:    Female: 70 to 74 years
+        ALT0M047:    Female: 75 to 79 years
+        ALT0M048:    Female: 80 to 84 years
+        ALT0M049:    Female: 85 years and over
+ 
+    Table 2:     Total Population
+    Universe:    Total population
+    Source code: B01003
+    NHGIS code:  ALUB
+        ALUBM001:    Total
+ 
+    Table 3:     Race
+    Universe:    Total population
+    Source code: B02001
+    NHGIS code:  ALUC
+        ALUCM001:    Total
+        ALUCM002:    White alone
+        ALUCM003:    Black or African American alone
+        ALUCM004:    American Indian and Alaska Native alone
+        ALUCM005:    Asian alone
+        ALUCM006:    Native Hawaiian and Other Pacific Islander alone
+        ALUCM007:    Some other race alone
+        ALUCM008:    Two or more races
+        ALUCM009:    Two or more races: Two races including Some other race
+        ALUCM010:    Two or more races: Two races excluding Some other race, and three or more races
+ 
+    Table 4:     Hispanic or Latino Origin
+    Universe:    Total population
+    Source code: B03003
+    NHGIS code:  ALUL
+        ALULM001:    Total
+        ALULM002:    Not Hispanic or Latino
+        ALULM003:    Hispanic or Latino
+ 
+    Table 5:     Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: B15003
+    NHGIS code:  ALWG
+        ALWGM001:    Total
+        ALWGM002:    No schooling completed
+        ALWGM003:    Nursery school
+        ALWGM004:    Kindergarten
+        ALWGM005:    1st grade
+        ALWGM006:    2nd grade
+        ALWGM007:    3rd grade
+        ALWGM008:    4th grade
+        ALWGM009:    5th grade
+        ALWGM010:    6th grade
+        ALWGM011:    7th grade
+        ALWGM012:    8th grade
+        ALWGM013:    9th grade
+        ALWGM014:    10th grade
+        ALWGM015:    11th grade
+        ALWGM016:    12th grade, no diploma
+        ALWGM017:    Regular high school diploma
+        ALWGM018:    GED or alternative credential
+        ALWGM019:    Some college, less than 1 year
+        ALWGM020:    Some college, 1 or more years, no degree
+        ALWGM021:    Associate's degree
+        ALWGM022:    Bachelor's degree
+        ALWGM023:    Master's degree
+        ALWGM024:    Professional school degree
+        ALWGM025:    Doctorate degree
+ 
+    Table 6:     Median Household Income in the Past 12 Months (in 2019 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19013
+    NHGIS code:  ALW1
+        ALW1M001:    Median household income in the past 12 months (in 2019 inflation-adjusted dollars)
+ 
+    Table 7:     Employment Status for the Population 16 Years and Over
+    Universe:    Population 16 years and over
+    Source code: B23025
+    NHGIS code:  ALY3
+        ALY3M001:    Total
+        ALY3M002:    In labor force
+        ALY3M003:    In labor force: Civilian labor force
+        ALY3M004:    In labor force: Civilian labor force: Employed
+        ALY3M005:    In labor force: Civilian labor force: Unemployed
+        ALY3M006:    In labor force: Armed Forces
+        ALY3M007:    Not in labor force
+ 
+    Table 8:     Citizen, Voting-Age Population by Age [Data for nation, state, county, tract, block group, place, congressional district, and state legislative district levels only]
+    Universe:    Citizens 18 years and over
+    Source code: B29001
+    NHGIS code:  AL2G
+        AL2GM001:    Total
+        AL2GM002:    18 to 29 years
+        AL2GM003:    30 to 44 years
+        AL2GM004:    45 to 64 years
+        AL2GM005:    65 years and over
+ 
+    Table 9:     Allocation of Citizenship Status
+    Universe:    Total population
+    Source code: B99051
+    NHGIS code:  AL2O
+        AL2OM001:    Total
+        AL2OM002:    Native
+        AL2OM003:    Native: Allocated
+        AL2OM004:    Native: Not allocated
+        AL2OM005:    Foreign born
+        AL2OM006:    Foreign born: Allocated
+        AL2OM007:    Foreign born: Not allocated
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, Tracy Kugler, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 15.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2020. 
+        http://doi.org/10.18128/D050.V15.0
+
+    * Publications and research reports employing school attendance areas data 
+      (either tabular or GIS) must cite it appropriately. The citation should 
+      include the following:
+
+        The College of William and Mary and the Minnesota Population Center.
+        School Attendance Boundary Information System (SABINS): Version 1.0.
+        Minneapolis, MN: University of Minnesota 2011.
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+    * If possible, citations involving school attendance areas should also include
+      the URL for the SABINS site:
+
+        http://www.sabinsdata.org/.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
