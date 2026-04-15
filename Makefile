@@ -49,6 +49,15 @@ jn: ## Launch jupyter notebook in venv
 	fi
 
 # ============================================================================
+# Render the pipeline DAG
+# Requires @mermaid-js/mermaid-cli (`npm install -g @mermaid-js/mermaid-cli`)
+# ============================================================================
+.PHONY: dag
+dag: ## Render assets/dag.mmd to PNG and SVG
+	mmdc -i assets/dag.mmd -o assets/dag.png -b transparent -w 3200 -p assets/puppeteer-config.json
+	mmdc -i assets/dag.mmd -o assets/dag.svg -b transparent -p assets/puppeteer-config.json
+
+# ============================================================================
 # Help
 # ============================================================================
 .PHONY: help

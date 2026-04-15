@@ -1,6 +1,7 @@
 # 📦 Deconstructing the MeToo Movement and the Blue Wave in the 2018 House Elections
 
 [![Citations Checker](https://github.com/LSYS/deconstruct/actions/workflows/citations_watch.yml/badge.svg)](https://github.com/LSYS/deconstruct/actions/workflows/citations_watch.yml)
+[![DocLinks](https://github.com/LSYS/deconstruct/actions/workflows/links.yml/badge.svg)](https://github.com/LSYS/deconstruct/actions/workflows/links.yml)
 
 ## 📄 Summary
 
@@ -63,9 +64,15 @@ Hence, the more likely channel is the rise of new Democratic women through a wea
 └── readme.md
 ```
 
-The pipeline consists of **three stages**: (1) data processing, (2) computational text analysis, and (3) statistical analysis.
 
 ![DAG](./assets/dag.png)
+
+## Software
+
+- **Python 3.10** with `pandas==2.2.3`, `pyjanitor==0.27.0` — full list in [`assets/requirements.txt`](assets/requirements.txt). Bootstrap with `make setup`.
+- **Stata 13+** (15+ recommended; `interflex.do` uses `grstyle set ci` for CI-band transparency only on Stata 15+)
+- **LaTeX** with `acmart` and `latexmk`
+- Manuscript inspection targets in `ms/Makefile` use [LSYS/texCheckmate](https://github.com/LSYS/texCheckmate), my shell/Make utilities for LaTeX manuscript hygiene (word counts, acronym tally, repeated-word checks, hardcoded-number finder, textidote, etc.).
 
 ### 🔄 Stage 1: Data Pipeline (Python)
 
@@ -106,13 +113,6 @@ do deconstruct.do
 ```
 
 `deconstruct.do` calls each producer script in paper-exhibit order, wrapped in `preserve`/`restore`. Outputs go directly to `ms/tables/` and `ms/figures/`.
-
-## Software
-
-- **Python 3.10** with `pandas==2.2.3`, `pyjanitor==0.27.0` — full list in [`assets/requirements.txt`](assets/requirements.txt). Bootstrap with `make setup`.
-- **Stata 13+** (15+ recommended; `interflex.do` uses `grstyle set ci` for CI-band transparency only on Stata 15+)
-- **LaTeX** with `acmart` and `latexmk`
-- Manuscript inspection targets in `ms/Makefile` use [LSYS/texCheckmate](https://github.com/LSYS/texCheckmate), my shell/Make utilities for LaTeX manuscript hygiene (word counts, acronym tally, repeated-word checks, hardcoded-number finder, textidote, etc.).
 
 ## Citations
 
