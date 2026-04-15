@@ -14,3 +14,4 @@ jobs:
     - uses: gaurav-nelson/github-action-markdown-link-check@v1
       with:
         file-path: 'readme.md'
+        max-depth: 0

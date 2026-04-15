@@ -86,6 +86,7 @@ end
 %% ======================
 subgraph stata_analysis["<b>ANALYSIS</b>"]
     direction LR
+    stata_ado["ado/"]
     stata_orch["<b>deconstruct.do</b>"]
     stata_tables["voteshare.do · candidacy.do · turnout.do<br/>voter-values.do · voter-vote.do<br/>voteshare-2016placebo.do · candidacy-2016placebo.do<br/>voteshare|candidacy|turnout-density-intensity.do"]
     stata_figs["interflex.do<br/>tweets-ts.do · tweets-ts-2016to18.do<br/>state-level.do · cawp.do"]
@@ -159,6 +160,7 @@ manual_labels --> tx_fewshot
 panel --> stata_orch
 voter_data --> stata_orch
 h2016_data --> stata_orch
+stata_ado --> stata_orch
 stata_orch --> stata_tables
 stata_orch --> stata_figs
 
@@ -193,7 +195,7 @@ classDef dataset fill:#eef0f4,stroke:#9aa7b8,color:#2c3e50;
 class raw_tweets,geoloc,panel,voter_data,h2016_data,gc_human,random_sample,manual_labels dataset;
 
 classDef stata fill:#fff2e5,stroke:#e0b182,color:#6a4c1f;
-class stata_orch,stata_tables,stata_figs stata;
+class stata_orch,stata_tables,stata_figs,stata_ado stata;
 
 classDef result fill:#e6f7e6,stroke:#8acb8a,color:#2f5f2f;
 class ms_tables,ms_figures,paper_tex result;
