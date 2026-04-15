@@ -1,0 +1,209 @@
+%%{
+  init: {
+    "theme": "neutral",
+    "flowchart": {"defaultRenderer": "elk"},
+    "themeVariables": {
+      "clusterBkg": "#ffffff",
+      "clusterBorder": "#cccccc",
+      "clusterFontSize": "14px",
+      "clusterFontWeight": "bold",
+      "primaryColor": "#e9f2ff",
+      "lineColor": "#7daee6"
+    }
+  }
+}%%
+
+graph TB
+
+%% ======================
+%% Raw inputs (committed reference data + external downloads)
+%% ======================
+subgraph inputs["<b>INPUTS</b>"]
+    direction LR
+    countries_cities[("countries-cities-data")]
+    election_2018[("2018 House returns")]
+    election_2014[("2014 House returns")]
+    census_raw[("ACS 2015-19 (NHGIS)")]
+    election_context[("election-context-2018")]
+    countypres[("countypres 2000-16")]
+    precinct_2016[("2016 precinct-house<br/><i>gitignored</i>")]
+    voter_survey[("VOTER Survey 2018<br/><i>gitignored</i>")]
+end
+
+%% ======================
+%% Build pipeline (Python notebooks)
+%% ======================
+subgraph build_pipeline["<b>BUILD PIPELINE</b>"]
+    direction LR
+    nb_1["1-downloadTweets/<br/>get-old-tweets"]
+    raw_tweets[("raw tweets<br/>(monthly CSVs)")]
+    nb_2["2-downloadGeolocation/<br/>get-twitteruser-loc"]
+    geoloc[("user geolocations")]
+    nb_3["3-parseGeolocation/<br/>ParseGeolocation"]
+    nb_4a["4-classifyAccounts/<br/>botometer"]
+    nb_4b["4-classifyAccounts/<br/>botometer-description"]
+    nb_5a["5-election2018Data/<br/>parse-election-data"]
+    nb_5b["5-election2018Data/<br/>get-ethnic"]
+    nb_6["6-ACS_2015_19/<br/>prep-census"]
+    nb_7["<b>7-merge/merge</b>"]
+    nb_8a["8-VOTER/<br/>get-voter-data"]
+    nb_8b["8-VOTER/<br/>processVOTER"]
+    nb_9["9-election2016Data/<br/>get-house2016-data"]
+end
+
+%% ======================
+%% Core datasets (Stata analysis inputs)
+%% ======================
+subgraph core_datasets[" "]
+    direction LR
+    panel[("<b>panel.dta</b>")]
+    voter_data[("voter-individual.csv")]
+    h2016_data[("house-2016-stata.csv")]
+end
+
+%% ======================
+%% Text analysis (Python notebooks)
+%% ======================
+subgraph text_analysis["<b>TEXT ANALYSIS</b>"]
+    direction LR
+    tx_0["0_tweet_content"]
+    gc_human[("<b>gc_human_tweets.parquet</b>")]
+    random_sample[("random_sample.csv")]
+    manual_labels[("random_sample-labelled.csv<br/><i>(hand-annotated)</i>")]
+    tx_bertopic["bertopic"]
+    tx_hashtags["hashtags"]
+    tx_hashtag_net["hashtag-network"]
+    tx_mentions["mentions"]
+    tx_mentions_net["mentions-network"]
+    tx_urls["urls"]
+    tx_ner["ner"]
+    tx_zeroshot["zeroshot-classify-<br/>corroborate"]
+    tx_fewshot["fewshot-unlableled"]
+end
+
+%% ======================
+%% Stata analysis
+%% ======================
+subgraph stata_analysis["<b>ANALYSIS</b>"]
+    direction LR
+    stata_orch["<b>deconstruct.do</b>"]
+    stata_tables["voteshare.do · candidacy.do · turnout.do<br/>voter-values.do · voter-vote.do<br/>voteshare-2016placebo.do · candidacy-2016placebo.do<br/>voteshare|candidacy|turnout-density-intensity.do"]
+    stata_figs["interflex.do<br/>tweets-ts.do · tweets-ts-2016to18.do<br/>state-level.do · cawp.do"]
+end
+
+%% ======================
+%% Manuscript
+%% ======================
+subgraph manuscript["<b>MANUSCRIPT</b>"]
+    direction LR
+    ms_tables[("ms/tables/")]
+    ms_figures[("ms/figures/")]
+    paper_tex["<b>paper.tex</b>"]
+    inspect["make inspect"]
+end
+
+%% ===== Inputs → Build =====
+countries_cities --> nb_3
+election_2018 --> nb_5a
+election_2018 --> nb_5b
+election_2014 --> nb_7
+election_context --> nb_7
+countypres --> nb_7
+countypres --> nb_9
+census_raw --> nb_6
+precinct_2016 --> nb_9
+voter_survey --> nb_8a
+
+%% ===== Build internal chain =====
+nb_1 --> raw_tweets
+raw_tweets --> nb_2
+nb_2 --> geoloc
+raw_tweets --> nb_3
+geoloc --> nb_3
+nb_3 --> nb_4a
+nb_4a --> nb_4b
+nb_5a --> nb_5b
+nb_3 --> nb_7
+nb_4a --> nb_7
+nb_5b --> nb_7
+nb_6 --> nb_7
+nb_3 --> nb_9
+nb_4a --> nb_9
+nb_5b --> nb_9
+nb_8a --> nb_8b
+
+%% ===== Build → Core datasets =====
+nb_7 --> panel
+nb_8b --> voter_data
+nb_9 --> h2016_data
+
+%% ===== Text analysis chain =====
+raw_tweets --> tx_0
+nb_4a --> tx_0
+tx_0 --> gc_human
+tx_0 --> random_sample
+random_sample -.-> manual_labels
+gc_human --> tx_bertopic
+gc_human --> tx_hashtags
+gc_human --> tx_hashtag_net
+gc_human --> tx_mentions
+gc_human --> tx_mentions_net
+gc_human --> tx_urls
+gc_human --> tx_ner
+gc_human --> tx_zeroshot
+gc_human --> tx_fewshot
+manual_labels --> tx_zeroshot
+manual_labels --> tx_fewshot
+
+%% ===== Stata chain =====
+panel --> stata_orch
+voter_data --> stata_orch
+h2016_data --> stata_orch
+stata_orch --> stata_tables
+stata_orch --> stata_figs
+
+%% ===== Producers → manuscript =====
+stata_tables --> ms_tables
+stata_figs --> ms_figures
+nb_4b --> ms_figures
+tx_bertopic --> ms_figures
+tx_hashtags --> ms_figures
+tx_hashtag_net --> ms_figures
+tx_mentions --> ms_figures
+tx_mentions_net --> ms_figures
+tx_urls --> ms_figures
+tx_ner -.-> paper_tex
+tx_zeroshot -.-> paper_tex
+tx_fewshot -.-> paper_tex
+ms_tables --> paper_tex
+ms_figures --> paper_tex
+ms_tables --> inspect
+ms_figures --> inspect
+
+%% =====================================
+%% Styling
+%% =====================================
+classDef input fill:#ffffff,stroke:#cccccc,color:#333333;
+class countries_cities,election_2018,election_2014,census_raw,election_context,countypres,precinct_2016,voter_survey input;
+
+classDef python fill:#e9f2ff,stroke:#7daee6,color:#1f3d63;
+class nb_1,nb_2,nb_3,nb_4a,nb_4b,nb_5a,nb_5b,nb_6,nb_7,nb_8a,nb_8b,nb_9,tx_0,tx_bertopic,tx_hashtags,tx_hashtag_net,tx_mentions,tx_mentions_net,tx_urls,tx_ner,tx_zeroshot,tx_fewshot,inspect python;
+
+classDef dataset fill:#eef0f4,stroke:#9aa7b8,color:#2c3e50;
+class raw_tweets,geoloc,panel,voter_data,h2016_data,gc_human,random_sample,manual_labels dataset;
+
+classDef stata fill:#fff2e5,stroke:#e0b182,color:#6a4c1f;
+class stata_orch,stata_tables,stata_figs stata;
+
+classDef result fill:#e6f7e6,stroke:#8acb8a,color:#2f5f2f;
+class ms_tables,ms_figures,paper_tex result;
+
+%% =====================================
+%% Faint subgraph (cluster) backgrounds
+%% =====================================
+style inputs fill:#fafafa,stroke:#e5e5e5,color:#555555
+style build_pipeline fill:#f3f7fd,stroke:#cfddf0,color:#1f3d63
+style core_datasets fill:#f7f8fb,stroke:#dadde4,color:#2c3e50
+style text_analysis fill:#f3f7fd,stroke:#cfddf0,color:#1f3d63
+style stata_analysis fill:#fcf7f0,stroke:#ecd9bd,color:#6a4c1f
+style manuscript fill:#f3faf3,stroke:#cfe5cf,color:#2f5f2f

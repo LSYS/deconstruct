@@ -1,0 +1,45 @@
+
+File: main.tex
+Encoding: utf8
+Words in text: 7114
+Words in headers: 73
+Words outside text (captions, etc.): 1205
+Number of headers: 31
+Number of floats/tables/figures: 6
+Number of math inlines: 65
+Number of math displayed: 3
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  0+0+0 (0/0/0/0) _top_
+  618+1+14 (1/0/0/0) Section: Introduction
+  0+1+0 (1/0/0/0) Section: Data
+  292+2+226 (1/1/0/0) Subsection: MeToo Tweets
+  111+4+18 (1/0/0/0) Subsection: Measuring Local Movement Strength
+  116+2+46 (1/0/0/0) Subsection: Election Returns
+  106+2+54 (1/0/0/0) Subsection: Candidate Characteristics
+  98+2+0 (1/0/0/0) Subsection: County-Level Demographics
+  174+2+0 (1/0/0/0) Subsection: VOTER Survey
+  117+2+0 (1/0/0/0) Subsection: Dataset Statistics
+  0+5+0 (1/0/0/0) Section: MeToo Movement and \#metoo Tweets
+  109+6+0 (1/0/0/0) Subsection: MeToo as a Grassroots Social Movement
+  204+3+57 (1/1/0/0) Subsection: A Brief Timeline
+  889+3+141 (1/2/1/0) Subsection: \#metoo Tweet Samples
+  369+2+0 (1/0/1/0) Subsection: Tweet Content
+  174+2+15 (1/0/0/0) Subsection: Individual-Level Attitudes
+  351+3+26 (1/0/0/0) Section: Candidate Vote Shares
+  310+8+39 (2/0/16/1) Subsection: Estimation
+  222+1+156 (1/0/8/0) Subsection: Results
+  219+3+0 (1/0/0/0) Subsection: Broader Electoral Shifts
+  289+2+47 (1/1/0/0) Section: Women Candidacy
+  180+1+0 (1/0/9/1) Subsection: Estimation
+  335+1+166 (1/1/15/0) Subsection: Results
+  310+4+23 (1/0/0/0) Subsection: Strategic Candidacy as Mechanism
+  263+1+0 (1/0/0/0) Section: Turnout
+  122+1+14 (1/0/8/1) Subsection: Estimation
+  148+1+124 (1/0/7/0) Subsection: Results
+  204+1+0 (1/0/0/0) Subsection: Interpretation
+  256+1+0 (1/0/0/0) Section: Conclusion
+  266+1+39 (1/0/0/0) Subsection: Limitations
+  262+5+0 (1/0/0/0) Subsection: Social Movements and Electoral Outcomes
+
+(errors:1)
