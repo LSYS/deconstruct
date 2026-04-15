@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this replication package, please cite the paper."
+authors:
+  - family-names: Shen
+    given-names: Lucas
+title: "Deconstructing the MeToo Movement and the Blue Wave in the 2018 House Elections"
+url: "https://github.com/LSYS/deconstruct"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Shen
+      given-names: Lucas
+  title: "Deconstructing the MeToo Movement and the Blue Wave in the 2018 House Elections"
+  journal: "Computational Communication Research"
+  notes: "forthcoming"
