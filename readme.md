@@ -48,17 +48,11 @@ Hence, the more likely channel is the rise of new Democratic women through a wea
 │   ├── set_environment.do        # env + load panel.dta
 │   ├── preamble.do               # data prep + variable definitions
 │   ├── deconstruct.do            # orchestrator (all tables/figures)
-│   └── (producer .do files)
+│   └── ...                       # do files
 │
 ├── ms/                         # LaTeX manuscript
-│   ├── paper.tex
-│   ├── figures/, tables/         # cited exhibits
-│   ├── references.bib
-│   └── Makefile
 │
 ├── assets/
-│   ├── requirements.txt          # pinned Python deps
-│   ├── dag.mmd, dag.png, dag.svg # pipeline DAG
 │
 ├── Makefile                    # `make setup` creates venv
 └── readme.md
@@ -70,8 +64,7 @@ Hence, the more likely channel is the rise of new Democratic women through a wea
 ## Software
 
 - **Python 3.10** with `pandas==2.2.3`, `pyjanitor==0.27.0` — full list in [`assets/requirements.txt`](assets/requirements.txt). Bootstrap with `make setup`.
-- **Stata 13+** (15+ recommended; `interflex.do` uses `grstyle set ci` for CI-band transparency only on Stata 15+)
-- **LaTeX** with `acmart` and `latexmk`
+- **Stata 13+** (15+ for CI-band transparency..)
 - Manuscript inspection targets in `ms/Makefile` use [LSYS/texCheckmate](https://github.com/LSYS/texCheckmate), my shell/Make utilities for LaTeX manuscript hygiene (word counts, acronym tally, repeated-word checks, hardcoded-number finder, textidote, etc.).
 
 ### 🔄 Stage 1: Data Pipeline (Python)
