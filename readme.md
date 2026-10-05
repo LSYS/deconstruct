@@ -13,6 +13,10 @@ Hence, the more likely channel is the rise of new Democratic women through a wea
 
 > Shen, Lucas. Forthcoming. "Deconstructing the MeToo Movement and the Blue Wave in the 2018 House Elections." *Computational Communication Research*.
 
+## 📑 Manuscript
+
+- [`ms/paper.pdf`](ms/paper.pdf)
+
 ## 📂 Repo Structure and Scripts
 
 ```bash

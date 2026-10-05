@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SRC_TEX="main.tex"
+SRC_TEX="paper.tex"
 LOG_DIR="./inspecting/logs"
 
 # total: Do not give sums per file, only total sum.

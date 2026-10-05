@@ -62,7 +62,7 @@ program define PostEstTurnout
     quietly {
         // Basic table info
         estadd local nobs       "\multicolumn{1}{c}{$ `e(N)' $}"
-        estadd local districtFE "\multicolumn{1}{c}{$ X $}"
+        estadd local stateFE    "\multicolumn{1}{c}{$ X $}"
         estadd local censusX    "\multicolumn{1}{c}{$ X $}"
         
         // Joint F-test of electoral covariates
@@ -128,7 +128,7 @@ esttab,
 		order(`keep_coeff')
 		coeflabel(`coeff_labels') 
 		`esttab_options' 		
-		scalars("districtFE District fixed effects"
+		scalars("stateFE State fixed effects"
 				"censusX Census Control"
 				"elec_F F-test: Electoral controls = 0"
 				"census_F F-test: County census = 0"
@@ -147,7 +147,7 @@ esttab  using ../ms/tables/turnout.tex,
 		order(`keep_coeff')
 		coeflabel(`coeff_labels') 
 		`esttab_options' 		
-		scalars("districtFE District fixed effects"
+		scalars("stateFE State fixed effects"
 				"censusX Census Control"
 				"elec_F F-test: Electoral controls = 0"
 				"census_F F-test: County census = 0"
