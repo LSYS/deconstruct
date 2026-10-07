@@ -124,14 +124,14 @@
 In 2018, the MeToo movement reached its peak, fueled by grassroots-driven social media activism.
 More than symbolic, the movement influenced public discourse and policy, leading to tangible changes in legislative deliberation \citep{vox2019}.
 These include bills that limit non-disclosure agreements in sexual misconduct cases \citep{Tippett2018}.
-By the 2018 midterm elections, \#MeToo had cascaded into a politically charged movement that largely aligned with the Democratic party, stood against the \R{} party, and rejected \R{} President Donald Trump's first term.
+By the 2018 midterm elections, \#MeToo had cascaded into a politically charged movement that largely aligned with the Democratic Party, stood against the \R{} Party, and rejected \R{} President Donald Trump's first term.
 
 The 2018 midterms, occurring right at the peak of the movement, saw historic gains for women in Congress \citep{cawp}.
-All 435 House seats were up for contest, and the \R{} lost 40 seats, the largest midterm loss since 1974.%
+All 435 House seats were up for contest, and the \R{}s lost 40 seats, the largest midterm loss since 1974.%
 \footnote{In the 1974 post-Watergate House elections, the Democrats gained a net of 49 seats.}
 The election also saw a record number of women running for Congress.
-In the House of Representatives, 235 women candidates ran, and 102 won--of whom 89 were Democrats \citep{cawp}.
-This historic representation of women in Congress empowering legislative changes \citep{Ban2022}, together with the Democratic party regaining control of the House, led to widespread assertions that the 2018 elections were a \#MeToo elections, one where women and Democratic candidates rode on the general 2018 context and the MeToo zeitgeist for political advantages \citep{genderwatch2018, telegraphMetoo, tippett2018-bi,thomsen2020}.
+In the House of Representatives, 235 women candidates ran, and 102 won---of whom 89 were Democrats \citep{cawp}.
+This historic representation of women in Congress empowering legislative changes \citep{Ban2022}, together with the Democratic Party regaining control of the House, led to widespread assertions that the 2018 elections were a \#MeToo elections, one where women and Democratic candidates rode on the general 2018 context and the MeToo zeitgeist for political advantages \citep{genderwatch2018, telegraphMetoo, tippett2018-bi,thomsen2020}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 This study empirically investigates the extent to which the MeToo movement influenced the 2018 House elections.
@@ -139,10 +139,10 @@ Specifically, I examine county-level variations in candidate vote shares, women 
 To quantify local support for the movement, I build a dataset based on MeToo tweets geocoded to US counties.
 I then link the tweets data with candidate characteristics, House election results \citep{mitCountyPres,mitCountyHouse2016}, and county-level demographics.
 I show that the geocoded tweet content reflects the core movement discourse, key figures, and salient events using semantic topic modeling, network analysis, named entity recognition, and manual coding.
-Moreover, the geographical variation of the tweets predicts individual-level attitudes \citep{voter}, where the strength of the local movement is positively correlated with the disapproval of the Republican party's handling of sexual harassment and general attitudes toward sexism.
+Moreover, the geographical variation of the tweets predicts individual-level attitudes \citep{voter}, where the strength of the local movement is positively correlated with the disapproval of the Republican Party's handling of sexual harassment and general attitudes toward sexism.
 
 The findings reveal a more nuanced reality than popular narratives suggest \citep{Lucas2021, CarsonHitefield2018, Gibson2019, dittmar2020, DeMora2023}.
-I did not find credible evidence that the movement boosted vote shares for Democratic candidates, including Democratic women.
+I do not find credible evidence that the movement boosted vote shares for Democratic candidates, including Democratic women.
 Nor do I find evidence that the movement increased turnout.
 Instead, the movement's translation into electoral impact likely operated through strategic candidacy within the Democratic Party.
 Specifically, Democratic women were significantly more likely to challenge co-partisan male incumbents in districts with strong movement activity, a pattern absent in 2016 and absent for Republican women.
@@ -152,13 +152,13 @@ This study contributes to understanding how decentralized social media
 activism shapes electoral politics.
 Unlike traditional media, such as print \citep{Lim2015}, radio \citep{AEP2015, Boas2011, Ferraz2008, Larreguy2014}, and broadcast \citep{DellaVigna2007, Oberholzer-Gee2009}, the MeToo movement emerged from a decentralized social movement on an independent media platform.
 Methodologically, the study addresses measurement validity in computational social science by combining text analyses with individual-level, geocoded survey data.
-In this sense, this study builds on research examining the role of independent media platforms on electoral consequences \citep{Enikolopov2011, cs, Miner2015}, particularly those demonstrating that early Twitter exposure favored left-leaning politicians \citep{cs}.
+In this sense, this study builds on research examining the role of independent media platforms in electoral consequences \citep{Enikolopov2011, cs, Miner2015}, particularly those demonstrating that early Twitter exposure favored left-leaning politicians \citep{cs}.
 Lastly, this paper also contributes to a growing literature on protest movements and their electoral consequences \citep{Acemoglu2018, Campante2017, trumphate, kim2022, womenmarch, leon2022, trumpcomment, elitestweet, weiss2022}.
 
 The paper is structured as follows.
 \cref{sec:data} details the construction of the geolocated MeToo tweets and linking with electoral and demographic data.
 \cref{sec:background} provides background to the MeToo movement, and how the \#metoo tweets capture the discourse contained within.
-\crefrange{sec:voteshare}{sec:turnout} examines the three mechanisms of vote share, women candidacy, and turnout.
+\crefrange{sec:voteshare}{sec:turnout} examine the three mechanisms of vote share, women candidacy, and turnout.
 \cref{sec:conclusion} discusses limitations and concludes.
 
 %-------------------------------------------------------------------------------
@@ -183,7 +183,7 @@ Each city-state is then linked to its primary county using the \emph{United Stat
 	\vspace{-1em}
 	\caption{
 		Timeline of MeToo Tweets in 2018.\\
-		\emph{Note:} \textit{January 7} Golden Globe awards; \textit{January 20} a million people took part in the second annual Women's March on the anniversary of President Donald Trump's oath of office, voicing disapproval of his administration and encouraging people to vote; \textit{January 28} Actor Jeremy Piven accused of sexual assault by three more women; \textit{February 25} Monica Lewinsky writes an essay about her experience with Bill Clinton; \textit{March 4} Oscars; \textit{April 16} \textit{The New York Times} and \textit{The New Yorker} won the \emph{Pulitzer Prize} gold medal for public service for their work on the Harvey Weinstein scandal and sexual assault in general; \textit{April 26} Bill Cosby finally found guilty of sexual assault; \textit{May 10} Spotify no longer plays R. Kelly; \textit{May 25} Harvey Weinstein is taken into police custody; \textit{June 5} 17 states have their primary elections; \textit{July 6} Canada PM Justin Trudeau denies need to conduct investigation of sexual misconduct against him; \textit{July 27} a \textit{New Yorker} article reports that CBS will investigate allegations of sexual misconduct by its CEO Leslie Moonves; \textit{August 20} accuser Asia Argento herself accused of sexual misconduct; and \textit{September 16} a \textit{Washington Post} article revealed Christine Blasey Ford was a victim of sexual assualt by then Supreme Court nominee Brett Kavanaugh.
+		\emph{Note:} \textit{January 7} Golden Globe awards; \textit{January 20} A million people took part in the second annual Women's March on the anniversary of President Donald Trump's oath of office, voicing disapproval of his administration and encouraging people to vote; \textit{January 28} Actor Jeremy Piven accused of sexual assault by three more women; \textit{February 25} Monica Lewinsky writes an essay about her experience with Bill Clinton; \textit{March 4} Oscars; \textit{April 16} \textit{The New York Times} and \textit{The New Yorker} won the \emph{Pulitzer Prize} gold medal for public service for their work on the Harvey Weinstein scandal and sexual assault in general; \textit{April 26} Bill Cosby finally found guilty of sexual assault; \textit{May 10} Spotify no longer plays R. Kelly; \textit{May 25} Harvey Weinstein is taken into police custody; \textit{June 5} Seventeen states have their primary elections; \textit{July 6} Canada PM Justin Trudeau denies need to conduct investigation of sexual misconduct against him; \textit{July 27} A \textit{New Yorker} article reports that CBS will investigate allegations of sexual misconduct by its CEO Leslie Moonves; \textit{August 20} Accuser Asia Argento herself accused of sexual misconduct; and \textit{September 16} A \textit{Washington Post} article revealed Christine Blasey Ford was a victim of sexual assault by then Supreme Court nominee Brett Kavanaugh.
 		See \url{https://web.archive.org/web/20240120220020/https://www.chicagotribune.com/lifestyles/ct-me-too-timeline-20171208-htmlstory.html} for a curation of MeToo events.
 	}
 	\label{fig:tweets-ts}
@@ -210,7 +210,7 @@ As the primary measure of local movement strength, I log the tweet density measu
 The county-level returns of the 2018 House of Representatives election come from the individual states' Secretary of State.
 I supplement data on these 40 states with four more states (Arkansas, Michigan, Nevada, and New Mexico) from the \emph{MIT Election Data and Science Lab} (MEDSL).%
 \footnote{\url{https://github.com/MEDSL/2018-elections-unoffical}.} 
-\footnote{At the time of collection, Alaska's Secretary of State (SOS) page on election results cannot be found, Connecticut, Kansas, Mississippi, and Missouri SOS pages lack voting results at the county or precinct level, and Minnesota has yet to publish their election results.}
+\footnote{At the time of collection, Alaska's Secretary of State (SOS) page on election results cannot be found, Connecticut, Kansas, Mississippi, and Missouri SOS pages lack voting results at the county or precinct level, and Minnesota has yet to publish its election results.}
 I collect 2016 county-level presidential election returns from MEDSL \citep{mitCountyPres}.
 For the falsification analyses, I collect the 2016 House election returns as a placebo outcome measure \citep{mitCountyHouse2016}.
 To compare changes in turnout from the 2014 midterm elections, I procure the county-level 2014 House election data from David Leip's Atlas of U.S. Presidential Elections \citep{dlusa}.
@@ -218,7 +218,7 @@ I merge all datasets using the FIPS (Federal Information Processing Standard) co
 
 %===============================================================================
 \subsection{Candidate Characteristics}
-For all 1,022 candidates in the 2018 House election, I hand-label their gender and incumbency and systemically infer their ethnicity using \emph{NamePrism}, a supervised algorithm that predicts ethnicity using first and last names and homophily in communication patterns \citep{NamePrism}.%
+For all 1,022 candidates in the 2018 House election, I hand-label their gender and incumbency and systematically infer their ethnicity using \emph{NamePrism}, a supervised algorithm that predicts ethnicity using first and last names and homophily in communication patterns \citep{NamePrism}.%
 \footnote{The NamePrism is a supervised classifier developed using 74 million names from an email company. Their Naive Bayes classifier infers nationality/ethnicity using both first and last names (to mitigate migration and marriage), with the likelihood estimated using the homophily principle in communication patterns---people of the same type communicate more frequently and recently.}
 From this, each candidate has an indicator for their (predicted) ethnicity (White, Black, Hispanic, or Other).
 I use these indicators to adjust for documented identity-based voting behaviors by ethnicity and gender \citep{Abrajano2005, Flanagan2018, HOLLI2010, Matsubayashi2011, Stephens-Davidowitz2014}, as well as to test mechanisms by gender in vote shares and candidacy.
@@ -238,7 +238,7 @@ I also collect ACS 5--year estimates for 2012--2016 for demographic changes when
 To link to and validate the geolocated MeToo tweets, I use the \emph{VOTER} (Views of the Electorate Research) survey \citep{voter}, which tracks about 8,000 individuals from 2012--18 (though some individuals drop out of the study from 2016--18).
 VOTER contains detailed measures of political attitudes, including attitudes toward sexism and sexual harassment, approval of political parties' handling of harassment, and self-reported voting behavior in presidential and congressional elections.
 I link VOTER respondents to county-level MeToo tweet measures using reported ZIP codes, crosswalked to counties using county FIPS codes from the US Cities Database.
-Out of 2,649 counties in the sample, 1,352 counties successfully matched to VOTER microdata, yielding over 6,644 individuals linked to geocoded tweet density measures.
+Out of 2,649 counties in the sample, 1,352 counties successfully matched to VOTER microdata, yielding 6,644 individuals linked to geocoded tweet density measures.
 For respondents tracked across waves, I compute changes in attitudes and voting behavior from 2016 to 2018.
 The objective is to validate the geolocated MeToo tweets to the extent that they predict the geographical distribution of individual-level pro-women and anti-Republican sentiments, and predict individual-reported voting patterns in the 2016 and 2018 elections.
 
@@ -286,10 +286,10 @@ By 2018, it fueled demand for real change through legislation in Congress that c
 \end{figure}
 
 The movement took center stage just before the midterm elections, particularly during Brett Kavanaugh's Supreme Court confirmation hearings (\cref{fig:tweets-ts}).
-The hearings, combined with existing allegations against President Trump, meant the movement propelled the midterms towards a nationalized referendum on the \R{} administration \citep{Lucas2021, CarsonHitefield2018, Gibson2019, dittmar2020, DeMora2023}.
+The hearings, combined with existing allegations against President Trump, meant the movement propelled the midterms toward a nationalized referendum on the \R{} administration \citep{Lucas2021, CarsonHitefield2018, Gibson2019, dittmar2020, DeMora2023}.
 Spikes in the online movement can also be traced back to high-profile events like the Cosby trial and the second Kavanaugh confirmation hearing (\cref{fig:tweets-ts}).
 The MeToo movement, combined with the amplification of social media, is thus proposed to have influenced the 2018 elections \citep{McAdam_Tarrow_2010}.
-\cref{fig:state-level}, for example, provides descriptive evidence that states with higher MeToo movement, as measured by the MeToo tweets (\cref{sec:local-measure}), have lower Republican vote shares.
+\cref{fig:state-level}, for example, provides descriptive evidence that states with a stronger MeToo movement, as measured by the MeToo tweets (\cref{sec:local-measure}), have lower Republican vote shares.
 
 %===============================================================================
 \subsection{\#metoo Tweet Samples}
@@ -303,7 +303,7 @@ From these additional conditional random samples of \#metoo tweets, I find simil
 To supplement my manual assessment of these random tweets, I use large language models (LLM) to both corroborate my coding and to scale the evaluation.
 First, I use a zero-shot classification using a prompt providing a definition of what tweet content could be genuine reflections of the MeToo discourse (e.g., political discussions around key related events, personal experiences of harassment or assault, protest movements, and general expressions of solidarity and support, see \cref{sec:tweet-content}), and what could be disingenuous usage (e.g., ironic uses or attacks on the Democratic Party and survivors).
 This procedure yields a 93\% agreement between the resulting classifications and my manual labels.
-Next, to scale this classification beyond the initial 100 tweets, I randomly sample 5000 more tweets, and provide a fixed, randomly drawn set of 10 labeled tweets (from the initial 100) directly in the LLM prompt for examples of \#metoo tweets in a few-shot classification task.
+Next, to scale this classification beyond the initial 100 tweets, I randomly sample 5,000 more tweets, and provide a fixed, randomly drawn set of 10 labeled tweets (from the initial 100) directly in the LLM prompt for examples of \#metoo tweets in a few-shot classification task.
 This classification suggests that close to three-quarters of the sample reflects the MeToo discourse (\cref{sm:random-samples}).
 
 \begin{table}[tbp]
@@ -374,7 +374,7 @@ This classification suggests that close to three-quarters of the sample reflects
 	\includegraphics[width=\linewidth]{figures/topic_2Dmap_darkmode.png}
 	\caption{
 		Two-Dimensional Visualization of \#metoo Tweet Topics.\\
-		Notes: The Tweet text us encoded into 768-dimensional embeddings, then projected to 2D space using UMAP dimensionality reduction that preserves the relationship between tweets for visualization.
+		Notes: The tweet text is encoded into 768-dimensional embeddings, then projected to 2D space using UMAP dimensionality reduction that preserves the relationship between tweets for visualization.
 		Topics are identified with BERTopic.
 		Each point is a tweet, and clusters of colored points represent topics.
 		These 25 topics collectively account for over 87\% of the tweet sample.		
@@ -398,7 +398,7 @@ This classification suggests that close to three-quarters of the sample reflects
 %===============================================================================
 \subsection{Tweet Content}
 \label{sec:tweet-content}
-To provide evidence that the \#metoo tweet sample's engagement patterns and semantic content captures the documented MeToo discourse in 2018 as discussed in \crefrange{sec:mt-background}{sec:mt-timeline}, I clean and deduplicate the raw text (e.g., ``i support the \#metoo metoo movement \#metoo movement!!!'' $\longrightarrow$ ``i support the \#metoo movement!'') before analyzing them (please see \cref{sm:text} for full details).
+To provide evidence that the \#metoo tweet sample's engagement patterns and semantic content capture the documented MeToo discourse in 2018 as discussed in \cref{sec:mt-background,sec:mt-timeline}, I clean and deduplicate the raw text (e.g., ``i support the \#metoo metoo movement \#metoo movement!!!'' $\longrightarrow$ ``i support the \#metoo movement!'') before analyzing them (please see \cref{sm:text} for full details).
 
 To uncover clusters of semantically-aware tweets revolving around themes in the MeToo discourse, I apply a transformer-based topic modeling approach using BERTopic  \citep{bertopic}.
 The topic modeling confirms that the majority of tweets relate to salient and relevant issues (\cref{fig:topic_2Dmap}), with the core discourse topic (51.6\%) containing keywords such as women, movement, men, and timesup.
@@ -407,7 +407,7 @@ Other top identified topics include the revived conversation around Clinton--Lew
 
 Hashtags that co-occur with \#metoo relate to electoral mobilization tags (voteblue2018, bluewave, timesup, p2 [Progressives 2.0], marchforourlives, votethemout2018; \cref{fig:network_hashtags}), and concentrated attention on the Kavanaugh hearings (\#kavanaugh), with the highest engagement on \#kavanaughhearings (10.2 retweets, 32.2 favorites; \cref{fig:top_hashtags_tabulation}).
 
-Anti-Trump tags are prominent (e.g., impeachtrump, arresttrumpcrimefamily, votethemout2018, bonespursunfit, 25trump, dumptrump), who was himself a top mention in the tweet network (``@realdonaldtrump'', \cref{fig:network_mentions}), consistent with the movement positioned as a referendum on the Trump administration.
+Anti-Trump tags are prominent (e.g., impeachtrump, arresttrumpcrimefamily, votethemout2018, bonespursunfit, 25trump, dumptrump), and Trump was himself a top mention in the tweet network (``@realdonaldtrump'', \cref{fig:network_mentions}), consistent with the movement positioned as a referendum on the Trump administration.
 Other frequently mentioned accounts center on figures involved in 2018 political controversies: Kavanaugh and Blasey Ford, and the senators who voted on the nomination (Collins, Flake, Murkowski, Feinstein, Graham).
 Tarana Burke, the founder of MeToo (\cref{sec:mt-timeline}), is a frequent mention, as are minor celebrities in the origin of the movement.
 Top web domains from the URL analysis reveal the presence of major news outlets (e.g., nytimes.com, theguardian.com, washingtonpost.com, wapo.st, huffingtonpost.com), many of which are shared with high retweets and favorites (\cref{fig:top_domains_tabulation}).
@@ -434,15 +434,15 @@ These individual-level patterns hold after adjusting for demographics, political
 \label{sec:voteshare}
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
-The 2018 midterms elections were widely characterized as a ``\#MeToo election'', with gender issues shaping the outcome to the advantage of the Democratic party \citep{genderwatch2018, telegraphMetoo, tippett2018-bi,thomsen2020, cs}.
+The 2018 midterm elections were widely characterized as a ``\#MeToo election'', with gender issues shaping the outcome to the advantage of the Democratic Party \citep{genderwatch2018, telegraphMetoo, tippett2018-bi,thomsen2020, cs}.
 On the surface, this appeared to be true given that the state-level \R{} vote shares decrease with the strength of the movement (\cref{fig:state-level}).
 This aggregate pattern, however, could reflect multiple mechanisms.
 
-First, the movement may have garnered greater support for women candidates, particularly Democratic ones, given the movement's alignment with Democratic party positions on gender issues, including those relating to workplace harassment and related legislation (\cref{sec:background}, see also \cref{sm:legal}).%
+First, the movement may have garnered greater support for women candidates, particularly Democratic ones, given the movement's alignment with Democratic Party positions on gender issues, including those relating to workplace harassment and related legislation (\cref{sec:background}, see also \cref{sm:legal}).%
 \footnote{\label{fn:legal}\cref{sm:legal} summarizes some legal implications of the MeToo movement, including bills related to sexual harassment, such as the limits of non-disclosure agreements and recall elections.}
 If the movement persuaded voters at the margin on such issues, Democratic women should receive higher vote shares in areas with stronger local movement activity.
 
-Second, this association may be intensified in Republican areas, given the movement's opposition towards the Trump administration (\cref{sec:background}).
+Second, this association may be intensified in Republican areas, given the movement's opposition toward the Trump administration (\cref{sec:background}).
 In strongly Republican areas, the discourse's highlighting of the Trump administration and Republican responses to misconduct allegations, including the highly salient and controversial Kavanaugh hearings (\cref{sec:background}), could have intensified tensions between partisan loyalties and the national conversation around gender representation and accountability.
 Party loyalty was lower among Republican voters in the 2016 elections \citep{KeeterIgielnik2020}, and the movement may have appealed to their demand for gender representativeness over typical partisan alignment \citep{Lucas2021, CarsonHitefield2018, Gibson2019, dittmar2020, DeMora2023, brookings2019turnout2}.
 If the local MeToo discourse indeed led voters to defect from their typical \R{} partisan alignment, Democratic candidates---especially women---should receive higher vote shares in Republican counties where the movement had greater traction.
@@ -477,7 +477,7 @@ Each indicator equals 1 if candidate $i$ belongs to that party-gender category, 
 $\hat{\beta}^{DW} > 0$ would imply an advantage for Democratic women in counties with stronger MeToo activity.
 
 $\bm{X}_{ic}$ includes county demographics interacted with candidate party, and candidate gender/ethnicity interacted with corresponding county composition, allowing for demographic voting patterns and identity-based heuristics \citep{EdlundPande2002, Abrajano2005, Herron2005, HOLLI2010, Oswald2010, Stephens-Davidowitz2014, Flanagan2018}.
-$\bm{\nu}^{\text{Rep., House}}_{c, 2016}$ and $\bm{\nu}^{\text{Rep., Pres.}}_{c, 2012-2016}$ are party-interacted 2016 House and 2012-2016 presidential vote shares, adjusting for existing political support.
+$\bm{\nu}^{\text{Rep., House}}_{c, 2016}$ and $\bm{\nu}^{\text{Rep., Pres.}}_{c, 2012-2016}$ are party-interacted 2016 House and 2012--2016 presidential vote shares, adjusting for existing political support.
 Candidate fixed effects control for a constant level of political support across counties.
 The full-sample regressions include third-party candidates.
 The standard errors are clustered by candidate since their vote shares are correlated across counties.%
@@ -486,7 +486,7 @@ The standard errors are clustered by candidate since their vote shares are corre
 
 \subsubsection{Heterogeneity by 2016 Republican Presidential Vote Share}
 
-I additionally examine if local support for Trump in the 2016 presidential elections moderates the relationship between the movement and candidate vote shares (\cref{sec:background}).
+I additionally examine if local support for Trump in the 2016 presidential election moderates the relationship between the movement and candidate vote shares (\cref{sec:background}).
 To formally test this, I add an additional interaction to \cref{eq:voteshare} for the county-level Republican vote share from the 2016 presidential election:
 \begin{equation}
 \begin{split}
@@ -501,7 +501,7 @@ To formally test this, I add an additional interaction to \cref{eq:voteshare} fo
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EQUATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 where the primary coefficients of interest are the $\gamma^{(.)}$ terms, capturing heterogeneity by 2016 Trump support.
-For instance, $\hat{\gamma}^{DW}>0$ implies Democratic women perform better where MeToo activity is higher, and Trump support was stronger.
+For instance, $\hat{\gamma}^{DW}>0$ implies Democratic women perform better where MeToo activity was higher and Trump support was stronger.
 The 2016 presidential vote share is centered at 50\%, so $\hat{\beta}$ terms reflect effects at 50-50 partisan splits.
 
 %===============================================================================
@@ -569,7 +569,7 @@ $ N $     &\multicolumn{1}{c}{$ 8631 $}         &\multicolumn{1}{c}{$ 8455 $}   
 
 In Column (1), with only candidate fixed effects, Republican candidates (both men and women) received lower vote shares in counties with higher MeToo activity.
 Column (2) adds past electoral controls, county demographics, and ethnic- and gender-based voting controls.
-With these controls, the Republican estimates attenuate to null, while Democratic men show a marginally significant negative relationship.
+With these controls, the Republican estimates attenuate to null, while Democratic men show a significant negative relationship.
 
 The average effects in Columns (1)--(2) (\cref{tab:voteshare}), however, may mask heterogeneous effects.
 Columns (3)--(4) report estimates from \cref{eq:repPres}, revealing significant heterogeneity.
@@ -594,15 +594,15 @@ Democratic women in 2016 show comparable positive associations with (future) MeT
 \subsection{Broader Electoral Shifts}
 \label{sec:voteshare-discussion}
 
-The vote share analyses provide no credible evidence that the MeToo movement directly shifted voter preferences towards Democratic candidates.
+The vote share analyses provide no credible evidence that the MeToo movement directly shifted voter preferences toward Democratic candidates.
 Democratic candidates have higher relative vote shares in \R{}-leaning counties with strong MeToo traction.
 On the surface, this suggests Democrats had an electoral advantage in Republican counties with a strong MeToo movement.
 However, the same patterns appeared in the 2016 House elections, before the movement reached its peak in the political climate of the 2018 elections.
 Since the 2018 movement cannot travel back in time \citep{trumpcomment}, the 2016 finding dispels any serious notion that the movement boosted vote shares for Democrats, including Democratic women candidates in particular.
 
-Instead, the patterns likely reflect underlying geographical and demographic shifts that both predict where MeToo discourse resonated and also shaped broad electoral shifts.
+Instead, the patterns likely reflect underlying geographical and demographic shifts that both predict where MeToo discourse resonated and also shape broad electoral shifts.
 While the analysis adjusts for county-level demographics, these controls cannot fully capture ongoing and complex compositional changes or attitudinal evolution within key demographic groups.
-For instance, certain Republican areas saw gender-based political realignments, with more college-educated white women aligning with the Democratic Party compared to their male counterparts, and large suburban areas that are typically lean Republican became increasingly Democratic \citep{brookings2020, brookings2020exitpolls}.
+For instance, certain Republican areas saw gender-based political realignments, with more college-educated white women aligning with the Democratic Party compared to their male counterparts, and large suburban areas that typically lean Republican became increasingly Democratic \citep{brookings2020, brookings2020exitpolls}.
 Such areas would both generate more engagement with social movements, such as the MeToo movement, and also exhibit subtle trends in electorate behavior independent of the MeToo movement.
 
 %-------------------------------------------------------------------------------
@@ -633,14 +633,14 @@ In particular, incumbent partisanship shapes these decisions in distinct ways fo
 
 Cross-partisan challenges represent standard electoral competition.
 Opposition parties regularly challenge incumbents, and candidate gender may be secondary to other factors determining same-party competition for the party's nomination.
-For Democratic women challenging Republican male incumbents in 2018, the movement could have provided multiple advantages, such as the heightened salience of gender issues and a national narrative around women as agents of (legal) change \citep{Tippett2018, tippett2018-bi, nyt2018} (\cref{sm:legal}).
+For Democratic women challenging Republican male incumbents in 2018, the movement could have provided multiple advantages, such as the heightened salience of gender issues and a national narrative around women as agents of (legal) change \citep[][see also \cref{sm:legal}]{Tippett2018, tippett2018-bi, nyt2018}.
 If true, cross-partisan challenges by Democratic women would be more likely in districts with more intense MeToo activity.
 On the other hand, the Republican Party, with its smaller pool of women candidates \citep{thomsen2020} and lower solidarity with the movement \citep{dittmar2020}, is unlikely to respond in similar ways.
 
 Same-party challenges usually face strong informal constraints, with party norms discouraging primary challenges to co-partisan incumbents.
 The statistical evidence suggests that in districts where the movement is stronger, these norms appear weaker, and co-partisan challenges are more easily framed as politically legitimate.
 For Democratic women, MeToo could have legitimized challenges to co-partisan male incumbents by framing such challenges as necessary for the party to credibly address gender issues and sexual misconduct.
-To this extent, norm disruption within the Democratic party might be stronger in districts where MeToo activity had more traction.
+To this extent, norm disruption within the Democratic Party might be stronger in districts where MeToo activity had more traction.
 
 %===============================================================================
 \subsection{Estimation}
@@ -659,14 +659,14 @@ To test whether the MeToo movement shaped women candidacy,  I model the probabil
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EQUATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 where $\tau_d$ is the district-level log tweet density (mean-centered),
-$\theta_d$ indicates incumbent type (Republican man or Democratic man), 
+$\theta_d$ indicates incumbent type (Republican man or Democratic man), and
 $\bm{X}_d$ include demographics and past electoral trends (\cref{sec:voteshare-estimation}).
 $\tau_d$ is mean-centered so that $\alpha_2$ captures how women candidacy responds to incumbent type at mean levels of the movement.
 $\alpha_1$ captures whether women candidacy responds unconditionally to the movement.
 The key parameter of interest is the interaction coefficient $\beta$, which captures whether the association between women candidacy and incumbent partisanship differs by the level of the movement.
-As complementary visualizations, I also estimate the marginal effects of the Metoo movement on candidacy using kernel smoothing for flexible functional forms of the interaction term \citep{interflex}.
+As complementary visualizations, I also estimate the marginal effects of the MeToo movement on candidacy using kernel smoothing for flexible functional forms of the interaction term \citep{interflex}.
 I estimate \cref{eq:candidacy} separately for Republican and Democratic women challengers, and for each, I run two specifications examining Republican male incumbents and Democratic male incumbents as the moderating variable $\theta_d$ to examine co-partisan and cross-partisan behavior.
-All regressions include state-fixed effects ($\text{State}_{s(d)}$), with standard errors clustered by state.
+All regressions include state fixed effects ($\text{State}_{s(d)}$), with standard errors clustered by state.
 
 %===============================================================================
 \subsection{Results}
@@ -682,9 +682,9 @@ All regressions include state-fixed effects ($\text{State}_{s(d)}$), with standa
 	\begin{adjustbox}{max width=1\textwidth}
 		\begin{tabular}{@{\hspace{0\tabcolsep}}l*{4}{D{.}{.}{-1}}@{\hspace{0\tabcolsep}}}
 			\toprule\toprule
-			&\multicolumn{4}{c}{Outcome is women challenger from the}\\
+			&\multicolumn{4}{c}{Outcome is woman challenger from the}\\
 			\cmidrule{2-5}
-			&\multicolumn{2}{c}{Republican party}&\multicolumn{2}{c}{Democratic party}\\
+			&\multicolumn{2}{c}{Republican Party}&\multicolumn{2}{c}{Democratic Party}\\
 			\cmidrule(r){2-3} \cmidrule(l){4-5}
 			&\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
 			\midrule
@@ -768,19 +768,19 @@ Analyses using the 2016 election data (\cref{sm:2016-elections}) confirm that th
 \subsection{Strategic Candidacy as Mechanism}
 These findings reveal that the MeToo movement shaped both inter-party and intra-party competition for women candidates, but in asymmetric ways.
 First, the estimates confirm intra-party norms for both parties, where women are less likely to stand in districts where the incumbent is a co-partisan male.
-However, the results suggest that these norms weaken for the Democratic party, in that strong movement increases the probability of women candidates in districts held by co-partisan men.
-This pattern does not extend to the Republican party, consistent with their difficulty fielding quality women candidates \citep{thomsen2020, CarsonHitefield2018} and lower solidarity with the movement \citep{dittmar2020}.%
-\footnote{While half of the Democratic women challengers expressed solidarity with the movement, only one in five from the Republican party did so \citep{dittmar2020}.}
+However, the results suggest that these norms weaken for the Democratic Party, in that a strong movement increases the probability of women candidates in districts held by co-partisan men.
+This pattern does not extend to the Republican Party, consistent with their difficulty fielding quality women candidates \citep{thomsen2020, CarsonHitefield2018} and lower solidarity with the movement \citep{dittmar2020}.%
+\footnote{While half of the Democratic women challengers expressed solidarity with the movement, only one in five from the Republican Party did so \citep{dittmar2020}.}
 
 Six Democratic women won seats against co-partisan male incumbents.
-In particular, one in a seat vacated after sexual misconduct allegations \citep{nyt2018}.
+In particular, one is a seat vacated after sexual misconduct allegations \citep{nyt2018}.
 Four are members of the left-leaning group, ``The Squad''.
 The remaining two won in safe \D{} Texas districts.
 All six succeeded in districts that are pronouncedly \D{}, consistent with an absence of credible evidence that the movement had direct electoral benefits for Democratic vote share (\cref{sec:voteshare-results}).
 In contrast, 17 Democratic women flipped Republican-held seats, including notable upsets like Kendra Horn in Oklahoma's R+10 5th district and Lizzie Fletcher in Texas's R+7 7th district.
 These cross-partisan victories likely constituted the primary driver of Democratic gains in 2018, but the candidacy results (\cref{sec:candidacy-results}) suggest such cross-party challenges did not vary with the local movement levels.
 
-The political profile of these Democratic women candidates resembled those in 2016 \citep{thomsen2020}, suggesting demand-side factors fueled by the movement rather than a fundamental reshaping of the gendered pipeline to power \citep{Safarpour2022, CarsonHitefield2018, Lucas2021, dittmar2020, DeMora2023, Gibson2019, thomsen2020}.
+The political profiles of these Democratic women candidates resembled those in 2016 \citep{thomsen2020}, suggesting demand-side factors fueled by the movement rather than a fundamental reshaping of the gendered pipeline to power \citep{Safarpour2022, CarsonHitefield2018, Lucas2021, dittmar2020, DeMora2023, Gibson2019, thomsen2020}.
 Many were lawyers \citep{thomsen2020}, reflecting public sentiment that representational shifts in Congress are necessary for substantive legislative change (\cref{sm:legal}).
 Overall, the results suggest that a key mechanism was candidate selection.
 Quality Democratic women candidates \citep{CarsonHitefield2018} responded strategically to constituency demands amplified through social media \citep{wholeads2019}.
@@ -823,7 +823,7 @@ To test whether the MeToo movement predicts changes in voter turnout, I model th
 \end{equation}
 where $\Delta\text{turnout}_c^{2016\text{--}2018} = \ln(\text{votes}_{c,2018}) - \ln(\text{votes}_{c,2016})$ captures the percentage change in total House votes cast.
 $\alpha_1$ measures the association between tweet density ($\tau_c$) and turnout change, and $\beta$ captures whether it varies with Trump's 2016 presidential vote share ($\nu^{\text{Rep., Pres.}}_{c,\ 2016}$).
-Demographic controls ($\bm{X}_c$) are both levels and trends using the ACS 5-year estimates from 2012--16 and 2015--19, which include the population and civilian voting-aged electorate in log terms.%
+Demographic controls ($\bm{X}_c$) are both levels and trends using the ACS 5-year estimates from 2012--16 and 2015--19, which include the population and civilian voting-age electorate in log terms.%
 \footnote{The exception is the percentage of rural population, available only from the decennial census.}
 Additional controls include turnout in the 2016 presidential and House elections, the 2012 presidential Republican vote share, and state fixed effects.
 Standard errors are clustered by state.
@@ -878,7 +878,7 @@ $ N $               &\multicolumn{1}{c}{$ 3101 $}         &\multicolumn{1}{c}{$ 
 The estimate for tweet density is positive ($0.0184$, $p > .1$), implying that a one SD increase in tweet density is associated with a 2.1\% increase in turnout, a sizeable but statistically insignificant association.
 % SD of log tweet density = 1.164888
 % Calculation: 0.0184 * 1.164888 = 0.0214 ≈ 2.1%
-In particular, the interaction effect is effectively zero ($\hat{\beta}=0.00003$, $p > .1$), implying that for a SD increase in the MeToo measure, every ten percentage point increase in the Republican vote share is associated with only a 0.03\% increase in turnout, although not statistically significant.
+In particular, the interaction effect is effectively zero ($\hat{\beta}=0.00003$, $p > .1$), implying that for a one SD increase in the MeToo measure, every ten percentage point increase in the Republican vote share is associated with only a 0.03\% increase in turnout, although not statistically significant.
 % SD of log tweet density = 1.164888
 % Calculation: 0.00003 * 1.164888 * 10 = 0.00035 ≈ 0.03%
 A concern is that comparing 2016 to 2018 might conflate secular turnout behavior with the social movement, since that compares a presidential election year to the midterms.
@@ -909,31 +909,31 @@ This study examines whether and how decentralized social media activism shapes e
 To measure the local strength of the movement, I geocode ``\#metoo'' tweets in 2018 and measure county-level variation by population-normalizing the measures.
 A critical challenge is establishing whether these large-scale digital traces reflect authentic narratives of the social movement, which I address through multiple approaches.
 First, the semantic topic modeling and network analyses confirm substantive engagement with movement themes and figures, as do analyses of hashtag co-occurrences and named entity recognition.
-Moreover, linking the county-level measure to micro survey data reveals that the strength of the local movement predicts disapproval of the Republican party in the handling of sexual harassment issues, and predicts general individual-level attitudes to sexism.
+Moreover, linking the county-level measure to micro survey data reveals that the strength of the local movement predicts disapproval of the Republican Party in the handling of sexual harassment issues, and predicts general individual-level attitudes to sexism.
 
 The econometric analysis exploits within-district geographic variation, revealing an apparent Democratic advantage in vote shares in Republican counties that had strong movement activity.
 However, I use the 2016 returns as falsification tests and find similar patterns, suggesting that the direct benefits reflect pre-existing demographic trends rather than the true effects of the movement.
-Comparing turnout changes from 2014 to 2016 and 2016 to 2018 likewise reveals no movement-driven differences.
+Comparing turnout changes from 2014 to 2018 and 2016 to 2018 likewise reveals no movement-driven differences.
 Instead, consistent with a historic level of women representation, the movement appeared to operate through strategic women candidacy, where women were significantly more likely to rise against co-partisan male incumbents, a pattern absent in the 2016 elections.
-Fundamentally, the results challenge simple narratives about ``\#MeToo elections'' by revealing that movement alone does not determine electoral impact.
+Fundamentally, the results challenge simple narratives about ``\#MeToo elections'' by revealing that the movement alone does not determine electoral impact.
 
 \subsection{Limitations}
 The text analyses of the sample \#metoo tweets, including topic modeling, named entity recognition, and network analysis, provide descriptive evidence of substantive engagement with the movement's discourse.
 Moreover, analyses using the VOTER survey demonstrate that the \#metoo tweet measure captures the geographical distribution of individual-level attitudes on issues of sexual harassment and political accountability.
 Nonetheless, these checks do not definitively establish that the sampled tweets originate from representative residents.
 
-The county-level variation of the MeToo movement is less sensitive to political border shifts and helps address unobserved confounders at the congressional district level \citep[e.g.,]{cs, womenmarch, DellaVigna2007}, but has limitations.
+The county-level variation of the MeToo movement is less sensitive to political border shifts and helps address unobserved confounders at the congressional district level \citep[e.g.,][]{cs, womenmarch, DellaVigna2007}, but has limitations.
 First, counties coterminous with their district do not contribute to the estimation, making results dependent on multi-county districts, which limits generalizability.
 Similarly, districts with few counties contribute little to estimation.
 Second, county and district borders evolve differently.
 Districts are redrawn based on population, while county lines are largely static.
 Combined with growing urbanization, this implies that suburban and rural districts are geographically large and tend to contain many counties, while urban districts do not.%
 \footnote{Districts are apportioned by population size every ten years, according to the US Constitution. However, county borders are more idiosyncratic, infrequently adjusted, and more determined by historic episodes such as the colonial land grant era than contemporary population size.}
-This skews the measured association of the MeToo movement towards rural, white, and traditionally Republican areas.
+This skews the measured association of the MeToo movement toward rural, white, and traditionally Republican areas.
 Relatedly, while models for changes in turnout adjust for demographic shifts, they may not fully capture underlying trends related to cross-county migration or younger voters coming of age.
 
 Lastly, this study examines only House elections, as only a third of Senate seats were contested in 2018.
-Nonetheless, the House plays a critical role in national legislation, including initiating presidential impeachment, and, keeping with the theme of the grassroots, is more responsive to their constituencies \citep[e.g.,][]{wholeads2019}.
+Nonetheless, the House plays a critical role in national legislation, including initiating presidential impeachment, and, keeping with the theme of the grassroots, is more responsive to its constituencies \citep[e.g.,][]{wholeads2019}.
 
 \subsection{Social Movements and Electoral Outcomes}
 The MeToo movement catalyzed into public conversation on social media (Twitter) in 2018 \citep{goenaga2021}, leading to widespread expectations of congressional change through Democratic gains in the midterm elections \citep{genderwatch2018, telegraphMetoo, thomsen2020, tippett2018-bi}.
@@ -947,7 +947,7 @@ Instead, the evidence points to a higher demand for women candidates, a call ans
 
 However, it is unclear whether such findings would generalize.
 Many successful challenges came from quality candidates, many of whom were lawyers \citep{thomsen2020}, reflecting public sentiment that demographic shifts in Congress were necessary.
-But their professional backgrounds resembled their predecessors in 2016, suggesting no fundamental reshaping of the gendered pipeline to power \citep{thomsen2020}.
+But their professional backgrounds resembled those of their predecessors in 2016, suggesting no fundamental reshaping of the gendered pipeline to power \citep{thomsen2020}.
 More likely is the case that these were pre-existing but strategically positioned candidates who could credibly claim alignment with the movement, thereby legitimizing their within-party rise.
 Without such political happenstance, such effects are unlikely to replicate in other elections.
 
@@ -1738,7 +1738,7 @@ $ N $                              &\multicolumn{1}{c}{$ 6644 $}         &\multi
 	}
 \end{table}
 
-\cref{tab:voter-values} presents the results using the microlevel VOTER data on attitudes towards sexual harassment.
+\cref{tab:voter-values} presents the results using the microlevel VOTER data on attitudes toward sexual harassment.
 All regressions control for individual characteristics, their political interest and knowledge, and their voting history.
 The individual characteristics include gender, race, education, employment, birth cohort (by decade), income, marital status, and the number of children.
 The set of controls for voting history and tendency includes who the respondent would have voted for in a presidential election and for Congress when asked in 2012 ((1) Democratic, (2) Republican, (3) Other/not sure/would not vote), plus the two indicators for whether the respondent always votes for the same party.
@@ -1753,8 +1753,8 @@ As anticipated, the tweets measure is negatively correlated with the sexism meas
 The tweets measure, however, does not predict any change in sexism (column (3)).
 Column (4) indicates the tweets measure is not just picking up concerns about broader ``problems in society''.
 
-In column (5), the tweets measure implies that respondents from counties with higher MeToo tweet incidences are less approving of the Republican party.
-The tweets measure, however, does not predict approval of the Democratic party in column (6).
+In column (5), the tweets measure implies that respondents from counties with higher MeToo tweet incidences are less approving of the Republican Party.
+The tweets measure, however, does not predict approval of the Democratic Party in column (6).
 As expected, whether an individual always votes Democratic or Republican is highly correlated with the party's approval.
 
 %===============================================================================
@@ -1801,7 +1801,7 @@ $ N $                              &\multicolumn{1}{c}{$ 6036 $}         &\multi
 		The dependent variable in column (1) is a dummy for whether the respondent voted Republican in the 2016 Presidential election.
 		The dependent variable in column (2) is a dummy for whether the respondent \emph{would} have voted Republican for Congress in 2018 (recorded in April).
 		The base category is to vote Democrat.
-		The dependent variable in column (3) captures whether the respondent changes vote from 2016--18: 1 if the vote changes from Democratic to Republican, 0 if there is no change, -1 if from Republican to Democratic party.
+		The dependent variable in column (3) captures whether the respondent changes vote from 2016--18: 1 if the vote changes from Democratic to Republican, 0 if there is no change, -1 if from Republican to Democratic Party.
 		All regressions control for individual characteristics, including gender, race, education, employment, birth cohort (by decade), income, marital status, and number of children.
 		Voting history \& tendency controls include which party the individual voted for in Congress and the President in 2012, and an indicator for whether the individual always votes for the same party.
 		Political interest and knowledge control for the level of interest and knowledge the individual has in politics and current affairs.
@@ -1931,9 +1931,9 @@ $ N $                                             &\multicolumn{1}{c}{$ 5938 $} 
 	\begin{adjustbox}{max width=1\textwidth}
 		\begin{tabular}{@{\hspace{0\tabcolsep}}l*{4}{D{.}{.}{-1}}@{\hspace{0\tabcolsep}}}
 			\toprule\toprule
-			&\multicolumn{4}{c}{Outcome is women challenger from the}\\
+			&\multicolumn{4}{c}{Outcome is woman challenger from the}\\
 			\cmidrule{2-5}
-			&\multicolumn{2}{c}{Republican party}&\multicolumn{2}{c}{Democratic party}\\
+			&\multicolumn{2}{c}{Republican Party}&\multicolumn{2}{c}{Democratic Party}\\
 			\cmidrule(r){2-3} \cmidrule(l){4-5}
 			&\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
 			\midrule
